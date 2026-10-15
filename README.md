@@ -20,7 +20,8 @@ In a world where countries are interconnected, global problems require us to
 look beyond individual interests and consider our shared responsibilities.
 
 ## Live site
-https://YOUR-USERNAME.github.io/wearegroup2/
+https://contemporaryworldproject.github.io/Project/
+
 
 ## Built with
 HTML, CSS and JavaScript in a single file (`index.html`).
