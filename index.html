@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>One Planet, One Responsibility — Climate Change & Global Interdependence</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#04060d;--card:rgba(255,255,255,.07);--ink:#f2f6fa;--mut:#a9b8c8;--g1:#5ecfd0;--g2:#3aa6a8;--g3:rgba(94,207,208,.14);--warn:#ffb86b;--line:rgba(255,255,255,.16);--head:"Orbitron","Eurostile","Arial Black",system-ui,sans-serif;--body:"Josefin Sans","Gill Sans","Trebuchet MS",system-ui,sans-serif;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:56px;overflow-x:hidden;background:var(--bg)}
+*,*:before,*:after{box-sizing:inherit}
+body{margin:0;color:var(--ink);font:18px/1.55 var(--body);overflow-x:hidden;
+background:radial-gradient(1.5px 1.5px at 20px 30px,#fff,transparent),radial-gradient(1px 1px at 90px 120px,#cfe,transparent),radial-gradient(1.5px 1.5px at 160px 60px,#fff,transparent),radial-gradient(1px 1px at 230px 180px,#9ef,transparent),radial-gradient(2px 2px at 300px 90px,#fff,transparent),radial-gradient(ellipse at 70% 10%,#101b33,transparent 60%),var(--bg);background-size:320px 220px,320px 220px,320px 220px,320px 220px,320px 220px,100% 100%,100% 100%}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:linear-gradient(90deg,#d4ffe0,#c7e8ff,#b8c6ff);display:flex;gap:2px;padding:0 14px;height:42px;overflow-x:auto;align-items:center;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a{color:#4a6272;text-decoration:none;padding:6px 10px;white-space:nowrap;font-size:14px;font-weight:700;text-transform:uppercase}
+nav a:hover{color:#0e2a38}nav b{display:none}
+.hero{position:relative;min-height:88vh;padding:70px 22px 90px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;max-width:980px;margin:0 auto;overflow:visible}
+.earth{position:absolute;right:-18vw;top:18%;width:min(70vw,520px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 30% 30%,#7fd0ff 0,#1f6fb8 35%,#0b2f63 65%,#03122b 100%);box-shadow:0 0 60px 8px rgba(80,200,255,.55),inset -30px -20px 60px rgba(0,0,0,.6);z-index:0}
+.earth:before{content:"";position:absolute;inset:0;border-radius:50%;background:radial-gradient(ellipse 30% 22% at 40% 35%,#4f9d45,transparent 70%),radial-gradient(ellipse 22% 28% at 62% 62%,#5da44a,transparent 70%)}
+.astro{position:absolute;right:22%;top:12%;font-size:56px;animation:fl 6s ease-in-out infinite;z-index:1}
+@keyframes fl{50%{transform:translateY(-12px) rotate(8deg)}}
+.hero>*:not(.earth):not(.astro){position:relative;z-index:2}
+.tag{background:rgba(255,255,255,.35);color:#fff;font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:13px;padding:2px 10px;border-radius:6px;margin-bottom:14px}
+.hero h1{font-family:var(--head);font-size:clamp(46px,12vw,110px);font-weight:900;letter-spacing:.14em;margin:0 0 12px;line-height:1;color:#fff}
+.hero h4{color:var(--g1);letter-spacing:.25em;text-transform:uppercase;margin:0 0 8px;font-size:clamp(16px,3vw,24px);font-weight:700}
+.hero p{max-width:480px;margin:0 0 26px;color:var(--mut);letter-spacing:.08em;text-transform:uppercase;font-size:15px}
+.btn{display:inline-block;background:linear-gradient(90deg,#3a3a3c,#6a6a6e);color:#fff;border:0;padding:12px 30px;border-radius:99px;font:700 18px var(--body);letter-spacing:.2em;text-transform:uppercase;cursor:pointer;text-decoration:underline}
+.btn:hover{background:var(--g2)}
+section{max-width:980px;margin:0 auto;padding:80px 22px}
+h2{font-family:var(--head);font-size:clamp(26px,5vw,44px);font-weight:700;margin:0 0 10px;letter-spacing:.12em;text-transform:uppercase;line-height:1.15}
+h3{letter-spacing:.06em;text-transform:uppercase}
+.sub{color:var(--g1);margin:0 0 34px;font-size:clamp(16px,2.2vw,21px);letter-spacing:.14em;text-transform:uppercase;font-weight:700;max-width:720px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.card,.panel,.ev{background:var(--card);border:1px solid var(--line);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.card{border-radius:18px;padding:24px}
+.card h3{margin:0 0 8px;font-size:17px;font-weight:700;color:#fff}
+.card p{color:var(--mut)}
+.stat{font-family:var(--head);font-size:46px;font-weight:900;line-height:1;color:var(--g1);margin-bottom:8px;text-shadow:0 0 24px rgba(94,207,208,.5)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.tab{background:rgba(255,255,255,.08);color:#fff;border:0;padding:9px 18px;border-radius:8px;cursor:pointer;font:700 15px var(--body);letter-spacing:.12em;text-transform:uppercase}
+.tab:hover{background:var(--g3)}
+.tab.on{background:var(--g2);color:#fff}
+.panel{border-radius:18px;padding:24px;min-height:110px;font-size:19px;line-height:1.5}
+.chain{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:16px}
+.node{background:rgba(255,255,255,.08);border:0;border-radius:8px;padding:11px 18px;cursor:pointer;font:700 15px var(--body);letter-spacing:.1em;text-transform:uppercase;color:#fff}
+.node.on{background:var(--g2)}
+.arrow{color:var(--g1);font-size:18px}
+svg.map{width:100%;height:auto;background:radial-gradient(ellipse at 50% 40%,#0f2a4d,#050b18);border-radius:18px;border:1px solid var(--line)}
+svg.map g[opacity]{fill:#3b9b5a}
+.pin{cursor:pointer;outline:none}.pin circle{fill:var(--g1);stroke:#fff;stroke-width:3;transition:.25s;filter:drop-shadow(0 0 8px var(--g1))}
+.pin:hover circle,.pin.on circle{fill:var(--warn);r:20}
+.pin text{font-size:13px;font-weight:700;fill:#fff;text-anchor:middle;pointer-events:none;letter-spacing:.04em}
+.bar{height:10px;border-radius:99px;background:rgba(255,255,255,.15);overflow:hidden;margin:6px 0 14px}
+.bar i{display:block;height:100%;background:var(--g1);width:0;transition:width .6s;border-radius:99px}
+.ev{display:flex;gap:12px;align-items:flex-start;margin:10px 0;padding:14px 16px;border-radius:14px;cursor:pointer;transition:.2s}
+.ev.on{border-color:var(--g1);background:var(--g3)}
+.ev input{accent-color:var(--g1);margin-top:5px;width:18px;height:18px}
+input[type=range]{width:100%;accent-color:var(--g1);margin:14px 0 6px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.treewrap{text-align:center;margin-top:34px}
+.treebtn{background:var(--g2);color:#fff;border:0;padding:10px 26px;font:700 22px var(--head);letter-spacing:.14em;text-transform:uppercase;cursor:pointer;border-radius:4px}
+.tree{font-size:min(60vw,280px);line-height:1;cursor:pointer;display:block;margin:20px auto 0;filter:drop-shadow(0 0 30px rgba(80,200,90,.35));transition:transform .4s;background:none;border:0}
+.tree:hover{transform:scale(1.04)}
+footer{background:rgba(255,255,255,.05);color:var(--mut);padding:36px 22px;font-size:13px;line-height:1.6;border-top:1px solid var(--line)}footer div{max-width:980px;margin:auto}
+footer a{color:var(--g1);word-break:break-all}
+@media (prefers-reduced-motion:reduce){.astro{animation:none}}
+@media (max-width:600px){section{padding:56px 18px}.astro{right:12%;top:8%}}
+
+:root{--head:"Public Sans","Helvetica Neue",Helvetica,Arial,sans-serif;--body:"Public Sans","Helvetica Neue",Helvetica,Arial,sans-serif;--red:#fc3d21}
+nav{background:#000;height:56px;border-bottom:1px solid #2a2a2a;padding:0 20px;justify-content:flex-start}
+nav:before{content:"🌐 EARTH · CLIMATE";color:#fff;font-weight:800;font-size:15px;letter-spacing:.04em;margin-right:22px;white-space:nowrap}
+nav a{color:#fff;font-size:13px;letter-spacing:.06em;font-weight:700}nav a:hover{color:var(--red)}
+.hero h1{font-weight:800;letter-spacing:-.02em;font-size:clamp(44px,10vw,100px);line-height:.95}
+.tag{background:var(--red);border-radius:0;letter-spacing:.12em}
+.hero h4{color:#fff;font-weight:500;letter-spacing:0;text-transform:none;font-size:clamp(20px,3vw,30px)}
+.hero p{text-transform:none;letter-spacing:0;font-size:18px}
+.btn{background:var(--red);text-decoration:none;letter-spacing:.08em;font-size:15px;padding:14px 28px}.btn:hover{background:#d92f15}
+h2{font-weight:800;letter-spacing:-.01em;text-transform:none;font-size:clamp(28px,4.5vw,44px)}
+h2:before{content:"";display:block;width:56px;height:4px;background:var(--red);margin-bottom:14px}
+.sub{color:var(--mut);text-transform:none;letter-spacing:0;font-weight:400}
+h3{text-transform:none;letter-spacing:0}
+.card{border-radius:0;border:0;border-top:4px solid var(--red);background:#111}
+.card h3{font-size:20px;font-weight:700}
+.panel{border-radius:0;background:#111;border:0;border-left:4px solid var(--red)}
+.tab,.node{border-radius:99px;text-transform:none;letter-spacing:0;font-weight:600;background:transparent;border:1px solid #666;color:#fff}
+.tab.on,.node.on{background:#fff;color:#000;border-color:#fff}
+.stat{font-family:var(--head);color:#fff;text-shadow:none}
+.ev{border-radius:0;background:#111}
+.homebtn{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:20;background:var(--red);color:#fff;text-decoration:none;font-weight:700;padding:12px 18px;border-radius:99px;box-shadow:0 6px 20px rgba(0,0,0,.5);font-size:14px;letter-spacing:.04em}
+.globewrap{position:relative;background:radial-gradient(ellipse at 50% 50%,#0b1b33,#02040a 70%);border:1px solid var(--line);overflow:hidden}
+canvas#globe{display:block;width:100%;cursor:grab;touch-action:none}
+.gbtns{position:absolute;left:12px;bottom:12px;display:flex;gap:8px;flex-wrap:wrap}
+.hint{color:var(--mut);font-size:14px;margin:8px 0 14px}
+.zoomctl{position:absolute;right:12px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;background:rgba(0,0,0,.55);border:1px solid var(--line);border-radius:99px;padding:8px 6px}
+.zoomctl button{width:34px;height:34px;border-radius:50%;border:0;background:#fff;color:#000;font:700 20px/1 var(--body);cursor:pointer}
+.zoomctl input{writing-mode:vertical-lr;direction:rtl;height:150px;width:24px;margin:0;accent-color:var(--red)}
+.flaggrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:10px;margin-bottom:16px}
+.flagtab{background:#111;border:1px solid #444;color:#fff;padding:12px 6px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px;font:600 13px var(--body);text-align:center;transition:.2s}
+.flagtab .fl{font-size:44px;line-height:1}.flagtab:hover{transform:translateY(-3px);border-color:#888}.flagtab.on{border-color:var(--red);background:#1f0f0c}
+.bigflag{font-size:68px;line-height:1;margin-bottom:6px}
+.actorgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.actor{background:#111;border-top:4px solid #444;padding:20px;transition:.4s}
+.actor .ico{font-size:44px;line-height:1;margin-bottom:8px}.actor h3{margin:0 0 6px;font-size:19px}.actor p{color:var(--mut);font-size:15px;margin:0 0 8px}.actor .weak{color:var(--warn)}
+.actor.lit{border-top-color:var(--red);background:#1f0f0c;transform:translateY(-8px) scale(1.03);box-shadow:0 0 0 2px var(--red),0 12px 30px rgba(252,61,33,.35)}
+.actbar{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin:18px 0 22px}.actbar span{color:var(--g1);font-weight:600;flex:1;min-width:220px}
+.bench{display:flex;align-items:center;justify-content:space-between;gap:10px;background:linear-gradient(#1a1209,#0c0804);border:1px solid #5a4020;border-radius:18px;padding:14px 18px;margin-bottom:20px}
+.bench .side{text-align:center;flex:1}.bench .side b{display:block;font-size:14px;color:#e8c98a}.bench .side span{font-size:42px;font-weight:800;color:#fff}
+.scaleico{font-size:clamp(70px,16vw,120px);line-height:1;transition:transform .7s cubic-bezier(.3,1.7,.5,1);transform-origin:50% 60%}
+.exh{background:#111;border:2px solid #333;border-radius:14px;padding:14px 16px;margin:10px 0;cursor:pointer;transition:.25s;position:relative}
+.exh:hover{transform:translateX(4px);border-color:#777}.exh small{color:#e8c98a;font-weight:800;letter-spacing:.14em}.exh p{margin:4px 0}
+.exh.A.on{border-color:var(--red);background:#1f0f0c}.exh.B.on{border-color:var(--g1);background:#0b1f20}
+.exh .ctr{display:none;color:var(--warn);font-style:italic;font-size:15px}.exh.on .ctr{display:block}
+.verdbox{margin-top:20px;text-align:center}
+.verdcard{margin-top:16px;padding:20px;border:2px solid #e8c98a;border-radius:16px;background:#1a1209;animation:pop .5s}
+.gavel{font-size:64px;display:inline-block;animation:bang .7s}
+@keyframes bang{0%{transform:rotate(-50deg)}50%{transform:rotate(25deg) scale(1.2)}100%{transform:rotate(0)}}@keyframes pop{from{transform:scale(.9);opacity:0}}
+.page{display:none}.page.on{display:block;animation:fadein .5s}.hero.page.on{display:flex}
+@keyframes fadein{from{opacity:0;transform:translateY(10px)}}
+nav a.cur{color:var(--red);box-shadow:inset 0 -3px 0 var(--red)}
+.pager{display:flex;justify-content:space-between;gap:12px;margin-top:56px;flex-wrap:wrap}.btn.pg{background:#333}.btn.pg:hover{background:#555}
+.page,.page.on{display:block;animation:none}.hero.page,.hero.page.on{display:flex}.pager{display:none}
+a.ref{color:var(--g1);font-size:.78em;white-space:nowrap;margin-left:4px;font-weight:600}
+html{scroll-padding-top:60px}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;800&display=swap" rel="stylesheet"></head><body id="top"><a class="homebtn" href="#home" id="homeBtn">↑ Back to Home</a>
+<nav><a href="#home">Home</a><a href="#issue">Introduction</a><a href="#map">World Map</a><a href="#asean">ASEAN</a><a href="#chain">Cause &amp; Effect</a><a href="#actors">Actors</a><a href="#court">Discussion</a><a href="#ways">Ways Forward</a><a href="#refs">Sources</a></nav>
+
+<header class="hero page" id="home"><div class="earth"></div><div class="astro">🧑‍🚀</div>
+<span class="tag">Global Interdependence</span>
+<h1>Climate<br>Change</h1>
+<h4>The world's greatest cost, felt from ASEAN to everywhere</h4>
+<p>From the forests of ASEAN to the whole world, one country's actions become every country's problem.</p>
+<a class="btn" href="#issue">Click here to proceed</a></header>
+
+<section class="page" id="issue">
+<h2>Introduction: The Issue</h2><p class="sub">Click a card to dig deeper.</p>
+<div class="grid" id="issueCards"></div>
+<div class="panel" id="issueBox" style="margin-top:18px">Select a card above.</div>
+<div class="grid" style="margin-top:18px">
+<div class="card"><div class="stat">60%</div><p>of global greenhouse gases come from fossil fuels, per the UN. About 90% of those are carbon dioxide.</p></div>
+<div class="card"><div class="stat">1.5°C</div><p>The Paris Agreement aims to hold warming well below 2°C and pursue efforts toward 1.5°C.</p></div>
+<div class="card"><div class="stat">🌐</div><p>Globalization links countries through trade and culture, and also links them through shared risk.</p></div>
+</div></section>
+
+<section class="page" id="map">
+<h2>Roll the Earth</h2><p class="sub">Drag to spin the globe. Tap a pin to see how that place contributes to, and suffers from, climate change.</p>
+<div class="globewrap"><canvas id="globe" aria-label="Interactive globe"></canvas><div class="gbtns"><button class="tab" id="gAsean">Focus ASEAN</button><button class="tab" id="gSpin">Pause spin</button></div><div class="zoomctl"><button id="zIn" aria-label="Zoom in">+</button><input type="range" id="zR" min="1" max="4" step="0.05" value="1" aria-label="Zoom"><button id="zOut" aria-label="Zoom out">−</button></div></div><p class="hint">Teal pins: ASEAN countries · Orange pins: other world regions · Scroll over the globe or use the side slider to zoom</p>
+<div class="panel" id="regBox" style="margin-top:12px">Select a region on the map.</div>
+<div class="treewrap"><button class="treebtn" onclick="document.getElementById('treeBox').scrollIntoView({behavior:'smooth',block:'center'})">Click the tree</button>
+<button class="tree" aria-label="Reveal the forest fact" onclick="treeFact()">🌳</button>
+<div class="panel" id="treeBox" style="margin-top:10px;text-align:left">Forests absorb carbon dioxide. When they are cleared or burned, that carbon goes back into the air, and the home of countless species disappears. Tap the tree to learn more.</div></div>
+</section>
+
+<section class="page" id="asean">
+<h2>Spotlight: ASEAN</h2><p class="sub">Southeast Asia is among the regions most exposed to climate change, and a living example of interdependence. Pick a member state.</p>
+<div class="flaggrid" id="aseanTabs"></div>
+<div class="panel" id="aseanBox"></div>
+<div class="grid" style="margin-top:18px">
+<div class="card"><h3>🌫️ Haze Agreement</h3><p>The ASEAN Agreement on Transboundary Haze Pollution (2002) exists because smoke from fires in one country drifts into its neighbors.</p></div>
+<div class="card"><h3>⚡ ASEAN Power Grid</h3><p>A long-term plan to connect national electricity grids so renewable power can be shared across borders.</p></div>
+<div class="card"><h3>🤝 Shared rivers &amp; seas</h3><p>The Mekong, monsoon rains and rising seas cross national lines, so no member can adapt alone.</p></div>
+</div></section>
+<section class="page" id="chain">
+<h2>Cause-and-Effect Pathway</h2><p class="sub">Follow the chain from emissions to your daily life.</p>
+<div class="chain" id="chainNodes"></div>
+<div class="panel" id="chainBox"></div>
+</section>
+
+<section class="page" id="actors">
+<h2>Who Is Involved?</h2><p class="sub">Choose an actor to see what they do, and where they fall short.</p>
+<div class="actorgrid" id="actorGrid"></div><div class="actbar"><button class="btn" id="chainBtn">▶ Play the chain reaction</button><span id="chainCap">Watch how one actor pushes the next.</span></div>
+<div class="cols" style="margin-top:18px">
+<div class="card"><h3>🔗 Actors influence each other</h3><p>Public pressure pushes governments to regulate. Regulation pushes companies toward clean tech. Cheaper clean tech makes stronger rules easier. When one moves, it pushes the next.</p></div>
+<div class="card"><h3>🚧 Why action stalls</h3><p><b>Economic interests</b> still favor fossil fuels. <b>Free riders</b> benefit when others cut emissions. <b>Unequal responsibility</b>: rich nations emitted most, yet poorer nations face the worst impacts. <b>Short election cycles</b> clash with decades-long plans.</p></div>
+</div></section>
+
+<section class="page" id="court">
+<h2>⚖️ Virtual Courtroom</h2><p class="sub">Who is responsible for climate change? Tap exhibits to add them to the scales and reveal the counterargument, then deliver your verdict.</p>
+<div class="bench"><div class="side"><b>🏭 Hold polluters accountable</b><span id="cA">0</span></div><div class="scaleico" id="scaleIco">⚖️</div><div class="side"><b>🌍 Shared responsibility</b><span id="cB">0</span></div></div>
+<div class="cols"><div><h3>🏭 Evidence: accountability</h3><div id="evA"></div></div><div><h3>🌍 Evidence: shared duty</h3><div id="evB"></div></div></div>
+<div class="panel verdbox"><b>🔨 The court is ready. How should responsibility be divided?</b>
+<input type="range" id="verd" min="0" max="100" value="50" aria-label="Verdict">
+<div style="display:flex;justify-content:space-between;font-size:13px;color:var(--mut)"><span>Mostly rich nations &amp; corporations</span><span>Everyone equally</span></div>
+<p><button class="btn" id="gavelBtn">🔨 Deliver verdict</button></p><div id="verdOut"></div></div></section>
+
+<section class="page" id="ways">
+<h2>Ways Forward</h2><p class="sub">Tick the actions you'd support to see the collective impact.</p>
+<div class="cols"><div id="sol"></div>
+<div class="card"><h3>Collective impact</h3><div class="bar"><i id="barFill"></i></div><p id="solTxt"></p>
+<p style="color:var(--mut);font-size:14px"><b>Idea:</b> polluters pay into an international fund, such as UNEP, based on the pollution they produce. That fund helps build green energy in developing countries that lack the money to cut emissions on their own.</p></div></div>
+<div class="card" style="margin-top:14px;text-align:center"><h3>🌱 Closing thought</h3><p>In a world where countries are interconnected, global problems require us to look beyond individual interests and consider our shared responsibilities.</p></div>
+</section>
+
+<footer id="refs"><div><b>Sources</b><br>
+Keohane &amp; Nye (2012), <i>Power and Interdependence</i> · Kolb, M. (2018), What Is Globalization? PIIE · NASA (2024), What Is Climate Change? · UNEP (2025) · Lindsay (2024), NASA Extreme Weather · Mariani (2025), Harvard · Lehmann (2024), J. Int. Relations · Peel (2017) · Adaptation Without Borders (2023) · IPCC (2023) AR6 Synthesis · UNFCCC (2015), <a href="https://unfccc.int/process-and-meetings/the-paris-agreement">Paris Agreement</a> · Delmas &amp; Burbano (2011) · Nordhaus (2015) · Brulle (2014) · Garnett et al. (2018) · Friedlingstein et al. (2023) · IRENA (2023) · Oxfam (2023) · Smith et al. (2025) · World Bank Climate Change Knowledge Portal, country pages (ASEAN).
+<br><br>Global Interdependence · Contemporary World project.</div></footer>
+
+<script>
+const $=id=>document.getElementById(id);
+function pick(wrap,sel,i){[...wrap.children].forEach((c,j)=>c.classList.toggle('on',j===i))}
+// Issue
+const issue=[["🏭 What is it?","Climate change is a long-term shift in temperatures and weather patterns, mainly driven by human activity, especially the release of greenhouse gases."],["🔥 Why now?","Burning fossil fuels releases gases that get trapped in the atmosphere, pushing Earth's average temperature higher than ever. Natural processes play a part, but human activity is what pushes it into full effect."],["🌪️ Effects","Heavier storms, deadly heat, wildfires, melting polar ice, rising seas, biodiversity loss, and scarcer food supplies, harming the environment and human and animal health."]];
+issue.forEach((x,i)=>{const d=document.createElement('div');d.className='card';d.style.cursor='pointer';d.innerHTML='<h3>'+x[0]+'</h3><p style="margin:0;color:var(--mut)">Tap to read</p>';d.onclick=()=>{$('issueBox').textContent=x[1];[...$('issueCards').children].forEach(c=>c.style.outline='');d.style.outline='2px solid var(--g1)'};$('issueCards').appendChild(d)});
+// Globe
+const P=a=>{const o=[];for(let i=0;i<a.length;i+=2)o.push([a[i],a[i+1]]);return o};
+const LAND=[
+P([-9,37,-9,43,-2,43.5,-1.5,46,-4.5,48.5,-1,49.5,2,51,4,52,8,54,8.5,57,10.5,57.5,10.5,55,12,54.5,14,54,19,54.5,21,57,24,57.5,24,59.5,29,60,23,60,21.5,63,25,65,21,65.5,17.5,62,19,60,16,56,13,55.5,11,59,8,58,5,60,5.5,62,12,66,16,69,21,70,27,71,33,70,41,67,33,66,40,64.5,44,66,53,68,60,69,68,69,73,68.5,80,73,88,75.5,100,77,112,74,130,71,140,72.5,160,70,170,70,180,69,180,65,178,64,170,60,163,58,162,55,157,51,156,57,160,61,155,59,143,59,137,54,141,52.5,140,48,135,43,131,42.5,129.5,41,129,36,126.5,34.5,126,37.5,125,39.5,121.5,39,122,37,119,37,121,34,122,30,121.5,28,119,25,116,23,113,22,110,21,108,21.5,106.5,20,105.8,19,108,16,109.2,13.5,109,11.5,107,10.4,105,8.6,104.8,10.3,103,10.5,101,12.5,100,13.5,99.5,11,100.3,7.5,101.5,6.8,103.5,5,104.2,1.4,103.4,1.3,101,3,100.3,5.5,98.5,8,98.3,10,98.6,13.5,97.7,16.5,96.3,16.7,94.5,16,94.2,19.5,92.5,20.5,91.5,22.5,89,21.8,87,21,85,19.5,82,16.5,80.2,15,80,10,78,8.5,76.5,9,75,12,73.5,16,72.8,19.5,72.5,21.5,70,21,68.5,23.5,66.5,25.5,62,25,57,25.8,56.5,27,54,26.7,50.5,29.5,48,30,48.5,28,50.2,26.5,51.5,24.5,54,24,56,26,56.5,24.5,58.5,23.5,59.8,22.5,57.5,19,55,17,52,16,48,14,43.5,12.6,42.5,15.5,39,21,35,28,34.5,29.5,32.5,30,34.5,31.5,35.5,34,36,36.5,32,36.2,28,36.8,26.5,38.5,26.5,40,29,41,31.5,41.2,36,41.5,41,41,41.5,42,37.5,44.5,38,46.5,35,45.5,33,45,31,46.5,29,45.5,28.5,43,27.5,42,26,40.7,23.5,40,22.5,37,21,38.5,19.5,41,18.5,42.5,15.5,44.5,13.5,45.5,12.3,45.3,12.5,44,14,42,16,41,18.5,40,16.5,38.5,15.7,38,16,39,15.5,40,12.5,41.5,10.5,43,8.8,44.4,7,43.6,4.5,43.4,3,43,3.2,42,.5,40.5,-.5,38.5,-1.5,37,-5,36,-6.5,36.8,-8.8,37.3]),
+P([-168,66,-162,70,-156,71.3,-141,69.6,-128,70,-115,68,-108,68,-95,72,-90,69,-82,69.5,-81,67,-86,66,-93,62,-94,59,-92.5,57,-88,56,-82,55,-82,52.5,-79,51.5,-78.5,54.5,-77,58,-78,62,-72,61.5,-69,59,-64,60,-61.5,56,-56,53,-59,50.5,-65.5,50,-64,48.5,-66,45,-70,43.5,-70,41.8,-74,40.5,-76,38,-75.5,35.3,-78,34,-81,31.5,-80,27,-80.5,25.2,-82,26.5,-83,29.5,-85,29.8,-89,30,-90,29,-94,29.5,-97.4,27,-97.5,24,-97.8,22,-96,19,-94.5,18.2,-91,18.5,-90.5,21,-87,21.5,-88,18,-88.5,16,-84,15.8,-83.3,12,-83.7,10.5,-81.5,9,-79.5,9.5,-77.5,8.5,-78,7.5,-80,7.3,-82,8,-85.5,10,-87.5,13,-91,14,-94,16,-96,15.7,-100,17,-105.5,20,-105.5,22.5,-109,25.5,-112.5,29.5,-114.5,31,-113,28.5,-110.5,24.5,-112,24.5,-114.5,28,-116.5,32,-118.5,34,-121,35,-122.5,37.5,-124,40.5,-124.5,43,-124,46.5,-124.7,48.4,-127,50.5,-130,54,-132,56,-135,58.5,-140,60,-146,60.8,-151,59.2,-153,57.5,-158,56.5,-163,54.7,-158,58.5,-162,59,-165,61,-166,64]),
+P([-77,8.5,-75,11,-71.5,12.4,-68,10.5,-62,10.7,-60,8.5,-57,6,-52,5,-50,1.5,-50,0,-47,-.8,-44,-2.5,-40,-2.9,-35,-5,-34.8,-8,-37,-12,-39,-17.5,-41,-22,-44,-23,-48.5,-26,-48.8,-28.5,-53,-34,-57,-35,-58,-38.5,-62,-39,-65,-41,-64.5,-43,-66,-46,-67.5,-47,-66,-48,-68.5,-50.5,-69,-52.5,-68,-54,-71,-54.5,-74,-52.5,-75.5,-48,-74,-43,-73.5,-37,-71.5,-30,-70.5,-22,-70,-18.3,-76,-14,-79,-8,-81,-5,-80,-2.5,-80.5,-1,-78.8,1.5,-77.5,4,-77.4,6.5]),
+P([-17,21,-16,24,-13,27.5,-10,29.5,-9.7,31,-6.5,34,-5.5,35.8,-2,35,2,36.8,8,37,10.5,37.2,11,35,10,33.5,11.5,33,15,32.3,19.5,30.5,20,32,23,32.7,29,31,32.5,31.2,32.5,29.5,34,27.5,35.5,24,37,21,38.5,18,40,15.5,43,12.7,44,10.5,48,11.2,51.2,11.8,51,10.4,48.5,5,45,2,41,-1.5,39.5,-4.5,39,-7,40.4,-10.5,40.5,-15,36,-18.5,35,-21,35.5,-24,32.8,-26,32.5,-28.5,30,-31.5,27,-33.8,22,-34.2,18.5,-34.2,17.5,-32,15,-27,14.5,-22.5,11.8,-17,13.5,-11.5,12,-6,9,-1,9.5,3.5,8.5,4.5,5.5,4.3,2,6.2,-2.5,4.8,-7.5,4.4,-10.5,6.5,-13,8.5,-15,11,-16.8,13.5,-17.4,15,-16.5,19]),
+P([113.5,-22,114.5,-26.5,115,-30.5,115,-34,118,-35,123,-34,126,-32.2,131,-31.5,134,-32.8,137,-34.9,138,-33,140,-37.5,144,-38.5,147,-38.5,150,-37,151,-33.5,153,-29,153.2,-26,151,-23.5,149,-20.5,146,-18.5,145.5,-15,143.5,-14,142.5,-10.8,141.5,-13,141,-17,139,-17.5,136,-15,137,-12,135,-12,132,-11.3,130.5,-12.5,129,-14.8,127,-14,125,-15,122,-17.5,121,-19.5,117,-20.5,114.5,-21.8]),
+P([-73,78,-60,82,-30,83.5,-18,81.5,-20,76,-22,70,-28,68.5,-39,65.5,-43,60,-48,61,-53,65,-55,70,-60,76]),
+P([-180,-71,-150,-77,-100,-73,-65,-68,-60,-64,-45,-70,-20,-72,10,-70,40,-68,70,-67,100,-66,140,-67,165,-71,180,-72,180,-90,-180,-90]),
+P([-5.5,50,1.5,51,1.5,53,-.5,55,-2,57.5,-3,58.6,-5,58.5,-6,56.5,-5,54.5,-3,53.5,-4.5,52]),P([-10,52,-6,52,-6,54.5,-8,55,-10,54]),P([-24,64.5,-18,63.4,-14,64.5,-14,66,-22,66.4]),
+P([44,-25,47,-25,50,-15.5,49,-12,47.5,-14,44,-17,43.5,-22]),P([130.5,31,132,33.5,135,34,140,35,141,38,142,40.5,140,41,139.5,38,136.5,37,133,35.5,131,34]),P([140,42,142,42.5,145,43.3,142,45.5,140,43.5]),
+P([80,6,82,7.5,80.2,9.8,79.8,8]),P([120.2,23,121.5,25,121.8,24,120.8,22]),P([172.7,-34.5,175,-37,178,-37.7,176,-39.5,175,-41.5,173,-39.5]),P([172.7,-40.7,174.3,-41.5,171,-44.5,168,-46.6,166.5,-45.5,170.5,-42.5]),
+P([-85,22,-81,23,-77,21.5,-74,20.2,-77.5,20,-80,21.8]),P([-74.5,18.5,-72,19.8,-68.5,18.7,-71,17.7]),
+P([95.3,5.6,97.5,5.2,100.5,2.5,103.5,-.5,106,-3,106,-5.8,104.5,-5.9,102,-4,99,.5,97,3]),P([105.2,-6.8,106.5,-6,108.5,-6.5,111,-6.4,114.5,-7.5,114.5,-8.6,110,-8.2,106,-7.4]),
+P([109,1.5,111,2,113,3.2,115.5,5,117.2,7,119,5.2,117.8,4,118,1,117.5,-1,116.5,-3.8,114.5,-4,111.5,-3.2,110,-2.7,109.5,-1]),P([119.5,.5,121,1.3,125,1.6,124,.5,121.5,.8,123,-1,123.5,-4.5,121.3,-3.5,122,-5,120.2,-5.6,119.5,-3.5,118.8,-2.5,119.8,-.8]),
+P([131,-.8,135,-3,138,-1.8,141,-2.6,145,-4.5,147.5,-6,150.5,-10.5,146,-8.2,143,-9,141,-9.1,138,-8.3,135,-4.5,132.5,-3.8]),
+P([120.5,18.5,122.3,18.4,122,16,121.6,14,124,12.6,121,13.5,120,16]),P([122,8,123.5,8.7,125.3,9.8,126.5,7.5,125.5,5.9,124,6.3,122.2,7]),P([122,11.5,125,11,125,10,123,9.5]),P([124.1,-9.3,127.3,-8.4,125,-9.2]),P([119.4,10.5,119.9,11.2,119.2,9.3,118.5,9])];
+const BORD=[P([99.9,20.4,99.1,19.7,98.1,19.6,97.8,18.2,97.7,16.5,98.6,15.2,98.6,13.5,98.2,12.2,98.6,10.2]),P([100.1,20.3,100.9,19.3,101.1,17.7,102.5,17.8,104.3,17.9,104.8,16.5,105.5,15.8,105.2,14.4]),P([105.2,14.4,104.2,14.4,102.9,14.2,102.3,13,102.4,12.2]),P([105.8,14.1,107.5,14.5,107.5,12.4,106,11.7,105,10.9,104.4,10.4]),P([102.2,22.4,103.3,21.5,104.6,20.5,104.1,19.2,105.2,18.5,105.9,17.5,106.5,16.5,107.3,15.8,107.5,14.7]),P([100.1,6.5,101,6.3,102,6.2]),P([109.6,1.8,110.5,1.2,112.4,1.4,114.2,1.4,115.5,2.1,115.8,3.5,117.2,4.3,117.8,4.2]),P([141,-2.6,141,-9.1]),P([105.2,14.4,105.8,14.1])];
+const pins=[["Philippines",12.9,121.8,"a",0],["Indonesia",-2,113,"a",1],["Vietnam",14,108,"a",2],["Thailand",15.5,101,"a",3],["Malaysia",4,102,"a",4],["Singapore",1.3,103.8,"a",5],["Myanmar",21,96,"a",6],["Cambodia/Laos",16,105,"a",7],["Brunei",4.6,114.7,"a",8],["Timor-Leste",-8.8,125.7,"a",9],["North America",45,-100,"r",0],["Latin America",-12,-60,"r",1],["Europe",50,15,"r",2],["Africa",5,20,"r",3],["Pacific Islands",-15,-175,"r",5]];
+const rinfo={0:"Historically a major emitter with high per-person emissions. Also faces wildfires, hurricanes and heat waves.",1:"Home to vital forests such as the Amazon. Deforestation adds to emissions, while droughts and storms hit farming.",2:"Industrialized early and has led on policy and renewables, yet still faces heat waves and floods.",3:"Contributes comparatively little to global emissions yet is highly exposed to drought and food insecurity, with fewer resources to adapt.",5:"Tiny emitters on the front line of sea-level rise, an example of unequal responsibility and vulnerability."};
+// procedural Earth texture
+const TW=1536,TH=768,CW=512,CH=256;let TEX=null,CLD=null,building=false;
+function hs(x,y){const s=Math.sin(x*127.1+y*311.7)*43758.5453;return s-Math.floor(s)}
+function vn(x,y){const xi=Math.floor(x),yi=Math.floor(y),xf=x-xi,yf=y-yi,u=xf*xf*(3-2*xf),v=yf*yf*(3-2*yf),a=hs(xi,yi),b=hs(xi+1,yi),c=hs(xi,yi+1),d=hs(xi+1,yi+1);return a+(b-a)*u+(c-a)*v+(a-b-c+d)*u*v}
+function fbm(x,y,o){let t=0,a=.5;for(let i=0;i<o;i++){t+=a*vn(x,y);x*=2.1;y*=2.1;a*=.5}return t}
+function sm(a,b,x){const t=Math.min(1,Math.max(0,(x-a)/(b-a)));return t*t*(3-2*t)}
+function blur(a,w,h,r){const t=new Float32Array(a.length),o=new Float32Array(a.length),n=2*r+1,cl=(v,m)=>Math.min(m-1,Math.max(0,v));for(let y=0;y<h;y++){let s=0;for(let x=-r;x<=r;x++)s+=a[y*w+cl(x,w)];for(let x=0;x<w;x++){t[y*w+x]=s/n;s+=a[y*w+cl(x+r+1,w)]-a[y*w+cl(x-r,w)]}}for(let x=0;x<w;x++){let s=0;for(let y=-r;y<=r;y++)s+=t[cl(y,h)*w+x];for(let y=0;y<h;y++){o[y*w+x]=s/n;s+=t[cl(y+r+1,h)*w+x]-t[cl(y-r,h)*w+x]}}return o}
+function landCol(lat,lon,al,n2,n3){if(lat<-62||(lon>-75&&lon<-12&&lat>59&&lat<84))return[238,243,250];const A=[30,92,46],B=[74,118,54],C=[58,82,58],D=[128,124,104],E=[240,245,250],t1=sm(12,34,al),t2=sm(46,58,al),t3=sm(60,68,al),t4=sm(66,76,al);let k=[0,1,2].map(i=>{let v=A[i]+(B[i]-A[i])*t1;v+=(C[i]-v)*t2;v+=(D[i]-v)*t3;return v+(E[i]-v)*t4});let ds=0;if(lon>-17&&lon<60&&lat>14&&lat<31)ds=1;else if(lon>115&&lon<146&&lat<-18&&lat>-33)ds=.9;else if(lon>85&&lon<112&&lat>38&&lat<46)ds=.8;else if(lon>-117&&lon<-103&&lat>26&&lat<38)ds=.7;else if(lon>-72&&lon<-68&&lat>-30&&lat<-17)ds=.9;else if(lon>12&&lon<24&&lat>-28&&lat<-18)ds=.8;ds*=sm(.3,.5,n2);const DC=[204,172,112],f=.78+.44*n3;return k.map((v,i)=>Math.min(255,(v+(DC[i]-v)*ds)*f))}
+function buildTex(){const MW=1024,MH=512,mc=document.createElement('canvas');mc.width=MW;mc.height=MH;const mx=mc.getContext('2d');mx.fillStyle='#000';mx.fillRect(0,0,MW,MH);mx.fillStyle='#fff';LAND.forEach(p=>{mx.beginPath();p.forEach((q,i)=>{const x=(q[0]+180)/360*MW,y=(90-q[1])/180*MH;i?mx.lineTo(x,y):mx.moveTo(x,y)});mx.closePath();mx.fill()});
+const id=mx.getImageData(0,0,MW,MH).data,m=new Float32Array(MW*MH);for(let i=0;i<m.length;i++)m[i]=id[i*4]/255;const m1=blur(m,MW,MH,2),m2=blur(blur(m,MW,MH,7),MW,MH,7),T=new Uint8ClampedArray(TW*TH*4);
+for(let ty=0;ty<TH;ty++){const lat=90-(ty+.5)/TH*180,al=Math.abs(lat);for(let tx=0;tx<TW;tx++){const lon=(tx+.5)/TW*360-180,mi=((ty/1.5)|0)*MW+((tx/1.5)|0),n=fbm(tx*.025,ty*.05,3),l=Math.min(1,Math.max(0,(m1[mi]+(n-.47)*.6-.5)*7+.5)),n3=fbm(tx*.15,ty*.3,2),sh=Math.min(1,m2[mi]*2.4),ice=sm(74,84,al)*.9;let r=6+24*sh,g=34+86*sh,b=82+68*sh;r+=(225-r)*ice;g+=(235-g)*ice;b+=(245-b)*ice;if(l>0){const c=landCol(lat,lon,al,fbm(tx*.05+50,ty*.1,3),n3);r+=(c[0]-r)*l;g+=(c[1]-g)*l;b+=(c[2]-b)*l}const o=(ty*TW+tx)*4;T[o]=r;T[o+1]=g;T[o+2]=b;T[o+3]=l*255}}
+const C=new Uint8Array(CW*CH);for(let y=0;y<CH;y++)for(let x=0;x<CW;x++)C[y*CW+x]=Math.min(1,Math.max(0,(fbm(x*.04,y*.08,5)-.46)*3.5))*255;TEX=T;CLD=C}
+const cv=$('globe'),cx=cv.getContext('2d');let Z=1,BR,W=600,H=560,R,L0=112,P0=10,auto=true,tL=null,tP=null,drag=null,moved=0,sel=-1,cld=0,off=null,img=null,octx=null;
+function size(){const w=cv.parentElement.clientWidth;if(w<10)return;W=w;H=Math.min(Math.max(W,320),560);const d=devicePixelRatio||1;cv.width=W*d;cv.height=H*d;cv.style.height=H+'px';cx.setTransform(d,0,0,d,0,0);BR=Math.min(W,H)*.44;R=BR*Z;off=null}
+function pr(la,lo){const p=la*Math.PI/180,l=(lo-L0)*Math.PI/180,q=P0*Math.PI/180,cp=Math.cos(p);return[W/2+R*cp*Math.sin(l),H/2-R*(Math.cos(q)*Math.sin(p)-Math.sin(q)*cp*Math.cos(l)),Math.sin(q)*Math.sin(p)+Math.cos(q)*cp*Math.cos(l)]}
+function render(){const s=Z>2?.55:.7,rw=Math.round(W*s),rh=Math.round(H*s);if(!off||off.width!=rw||off.height!=rh){off=document.createElement('canvas');off.width=rw;off.height=rh;octx=off.getContext('2d');img=octx.createImageData(rw,rh)}
+const d=img.data,r=R*s,cxp=rw/2,cyp=rh/2,p0=P0*Math.PI/180,sp=Math.sin(p0),cp=Math.cos(p0),PI=Math.PI,LX=-.45,LY=.5,LZ=.74,HX=-.241,HY=.268,HZ=.933;d.fill(0);
+const xa=Math.max(0,Math.floor(cxp-r)),xb=Math.min(rw,Math.ceil(cxp+r)),ya=Math.max(0,Math.floor(cyp-r)),yb=Math.min(rh,Math.ceil(cyp+r));
+for(let y=ya;y<yb;y++){const ny=-(y-cyp)/r;for(let x=xa;x<xb;x++){const nx=(x-cxp)/r,q=nx*nx+ny*ny;if(q>=1)continue;const nz=Math.sqrt(1-q),lat=Math.asin(Math.max(-1,Math.min(1,ny*cp+nz*sp))),lon=L0+Math.atan2(nx,nz*cp-ny*sp)*180/PI,u=((((lon%360)+540)%360)/360)*TW,v=Math.min(TH-1.001,(90-lat*180/PI)/180*TH),x0=u|0,x1=(x0+1)%TW,y0=v|0,y1=y0+1,fx=u-x0,fy=v-y0,i00=(y0*TW+x0)*4,i10=(y0*TW+x1)*4,i01=(y1*TW+x0)*4,i11=(y1*TW+x1)*4,w00=(1-fx)*(1-fy),w10=fx*(1-fy),w01=(1-fx)*fy,w11=fx*fy;
+let cr=TEX[i00]*w00+TEX[i10]*w10+TEX[i01]*w01+TEX[i11]*w11,cg=TEX[i00+1]*w00+TEX[i10+1]*w10+TEX[i01+1]*w01+TEX[i11+1]*w11,cb=TEX[i00+2]*w00+TEX[i10+2]*w10+TEX[i01+2]*w01+TEX[i11+2]*w11;const la=(TEX[i00+3]*w00+TEX[i10+3]*w10+TEX[i01+3]*w01+TEX[i11+3]*w11)/255;
+const df=Math.max(0,nx*LX+ny*LY+nz*LZ),sh=.2+.92*df;let t=Math.max(0,nx*HX+ny*HY+nz*HZ);t*=t;t*=t;t*=t;t*=t;t*=t;t*=t;const spc=t*150*(1-la);
+const ci=((((((lon+cld)%360)+360)%360)/360*CW)|0)+(Math.min(CH-1,((90-lat*180/PI)/180*CH)|0))*CW,ca=CLD[ci]/255*.72,cc=255*(.4+.7*df),rim=Math.pow(1-nz,2.8);
+let R_=cr*sh+spc,G_=cg*sh+spc,B_=cb*sh+spc;R_=R_*(1-ca)+cc*ca+70*rim;G_=G_*(1-ca)+cc*ca+110*rim;B_=B_*(1-ca)+cc*ca+190*rim;const o=(y*rw+x)*4;d[o]=R_;d[o+1]=G_;d[o+2]=B_;d[o+3]=255*Math.min(1,(1-q)*30)}}
+octx.putImageData(img,0,0);cx.drawImage(off,0,0,W,H)}
+function draw(){cx.clearRect(0,0,W,H);for(let i=0;i<140;i++){cx.fillStyle='rgba(255,255,255,'+(.25+hs(i,4)*.65)+')';const z=.6+hs(i,3)*1.4;cx.fillRect(hs(i,1)*W,hs(i,2)*H,z,z)}cx.save();cx.shadowColor='rgba(110,190,255,.75)';cx.shadowBlur=45;cx.fillStyle='#0a2a55';cx.beginPath();cx.arc(W/2,H/2,R*.99,0,7);cx.fill();cx.restore();
+if(TEX)render();else{cx.fillStyle='#fff';cx.textAlign='center';cx.font='600 16px system-ui';cx.fillText('Building the Earth…',W/2,H/2)}
+cx.strokeStyle='rgba(255,255,255,.8)';cx.lineWidth=1.2;cx.setLineDash([4,3]);for(const b of BORD){cx.beginPath();let st=false;for(const q of b){const p=pr(q[1],q[0]);if(p[2]>.02){st?cx.lineTo(p[0],p[1]):cx.moveTo(p[0],p[1]);st=true}else st=false}cx.stroke()}cx.setLineDash([]);
+cx.font='700 12px system-ui';cx.textAlign='center';
+for(const n of pins){const p=pr(n[1],n[2]);n.p=p;if(p[2]<=.05)continue;const a=n[3]=='a';cx.save();cx.shadowColor=a?'#5ecfd0':'#ffb86b';cx.shadowBlur=14;cx.fillStyle=a?'#fff':'#ffb86b';cx.strokeStyle=a?'#fc3d21':'#fff';cx.lineWidth=2.2;cx.beginPath();cx.arc(p[0],p[1],a?5:7,0,7);cx.fill();cx.stroke();cx.restore();if(a&&n[4]==sel){cx.strokeStyle='#ffb86b';cx.lineWidth=2;cx.beginPath();cx.arc(p[0],p[1],10+(Date.now()/70)%9,0,7);cx.stroke()}
+if(p[2]>.3&&(Z>1.3||!a||n[4]<2||n[4]==3||n[4]==4)){cx.lineWidth=3;cx.strokeStyle='rgba(0,10,30,.85)';cx.strokeText(n[0],p[0],p[1]-12);cx.fillStyle='#fff';cx.fillText(n[0],p[0],p[1]-12)}}}
+function tick(){if(tL!==null){L0+=(tL-L0)*.08;P0+=(tP-P0)*.08;if(Math.abs(tL-L0)<.3)tL=null}else if(auto&&!drag)L0+=.12;cld=(cld+.03)%360;const mr=cv.getBoundingClientRect();if(W>10&&mr.bottom>0&&mr.top<innerHeight)draw();requestAnimationFrame(tick)}
+cv.onpointerdown=e=>{drag=[e.clientX,e.clientY];moved=0;tL=null;cv.setPointerCapture(e.pointerId);cv.style.cursor='grabbing'};
+cv.onpointermove=e=>{if(!drag)return;const dx=e.clientX-drag[0],dy=e.clientY-drag[1];moved+=Math.abs(dx)+Math.abs(dy);const k=.4/Z;L0-=dx*k;P0=Math.max(-80,Math.min(80,P0+dy*k));drag=[e.clientX,e.clientY]};
+cv.onpointerup=e=>{cv.style.cursor='grab';drag=null;if(moved>6)return;const r=cv.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;let b=null,bd=22;for(const n of pins){if(!n.p||n.p[2]<=.05)continue;const d=Math.hypot(n.p[0]-x,n.p[1]-y);if(d<bd){bd=d;b=n}}if(b){if(b[3]=='a'){sel=b[4];$('regBox').innerHTML='<h3 style="margin-top:0">'+as[b[4]][0]+'</h3>'+as[b[4]][1]+refL(b[4])}else{$('regBox').innerHTML='<h3 style="margin-top:0">'+b[0]+'</h3>'+rinfo[b[4]]}}};
+const REFS=[[["PH","philippines"]],[["ID","indonesia"]],[["VN","vietnam"]],[["TH","thailand"]],[["MY","malaysia"]],[["SG","singapore"]],[["MM","myanmar"]],[["KH","cambodia"],["LA","lao-pdr"]],[["BN","brunei-darussalam"]],[["TL","timor-leste"]]];
+function refL(i){return ' '+REFS[i].map(r=>'<a class="ref" href="https://climateknowledgeportal.worldbank.org/country/'+r[1]+'" target="_blank" rel="noopener">('+r[0]+' · World Bank CCKP ↗)</a>').join(' ')}
+$('gAsean').onclick=()=>{tL=112;tP=8};$('gSpin').onclick=function(){auto=!auto;this.textContent=auto?'Pause spin':'Resume spin'};
+function setZ(v){Z=Math.max(1,Math.min(4,v));R=BR*Z;$('zR').value=Z}
+cv.addEventListener('wheel',e=>{e.preventDefault();setZ(Z*(e.deltaY<0?1.1:1/1.1))},{passive:false});
+$('zIn').onclick=()=>setZ(Z*1.25);$('zOut').onclick=()=>setZ(Z/1.25);$('zR').oninput=function(){setZ(+this.value)};
+addEventListener('resize',size);tick();
+// Pages
+const order=['home','issue','map','asean','chain','actors','court','ways'],names=['Home','Introduction','World Map','ASEAN','Cause & Effect','Actors','Discussion','Ways Forward'];
+order.forEach((id,i)=>{if(!i)return;const d=document.createElement('div');d.className='pager';d.innerHTML='<a class="btn pg" href="#'+order[i-1]+'">‹ '+names[i-1]+'</a>'+(i<order.length-1?'<a class="btn" href="#'+order[i+1]+'">'+names[i+1]+' ›</a>':'<a class="btn" href="#home">Back to Home</a>');$(id).appendChild(d)});
+function route(){size();if(!TEX&&!building){building=true;setTimeout(buildTex,60)}$('homeBtn').style.display='none'}
+addEventListener('scroll',()=>{$('homeBtn').style.display=scrollY>400?'block':'none'});
+// Chain// Chain
+const ch=[["🏭 Emissions","Burning fossil fuels, cutting forests, and heavy industry release greenhouse gases that trap heat."],["🌪️ Extreme weather","A hotter atmosphere shifts weather patterns, causing stronger typhoons, El Niño, heat waves, and floods."],["🌾 Food supply","Storms and droughts threaten harvests, so food becomes scarce and prices rise, in one country and in those that import from it."],["🧳 Migration","When lives and livelihoods are at risk, people move, putting pressure on cities and international relations."],["💰 Economies","Damaged farms, factories, and trade routes weaken national economies, and the shock travels through global trade."]];
+ch.forEach((c,i)=>{const n=document.createElement('button');n.className='node';n.textContent=c[0];n.onclick=()=>{$('chainBox').textContent=c[1];[...$('chainNodes').querySelectorAll('.node')].forEach((x,j)=>x.classList.toggle('on',j===i))};$('chainNodes').appendChild(n);if(i<ch.length-1){const a=document.createElement('span');a.className='arrow';a.textContent='→';$('chainNodes').appendChild(a)}});
+$('chainNodes').firstChild.click();
+// Actors
+const act=[["🏛️ Governments & UN","Make laws and global agreements. The Paris Agreement sets 2°C / 1.5°C goals, plus tools like carbon pricing, renewables, and emissions standards.","Weakness: national pledges are voluntary."],["🏢 Corporations","Introduce cleaner technology and set emission targets.","Weakness: some lobby against regulation or engage in greenwashing, exaggerating their green efforts."],["🏦 Financial institutions","Banks, investors, and insurers decide which projects get funded, so they can speed up or slow the shift from fossil fuels. Divestment campaigns pressure them to withdraw from coal, oil, and gas.","Weakness: profit motives can keep money flowing to fossil fuels."],["✊ Civil society","Youth activists, NGOs, and Indigenous communities use protest, legal action, and education to make inaction politically costly. Indigenous peoples are often both on the front lines and key stewards of forests and land.","Weakness: limited resources and formal power."],["🧑‍🤝‍🧑 Citizens","Lifestyle choices matter: using green energy like solar panels and electric vehicles, and consuming less.","Weakness: individual action alone cannot replace systemic change."]];
+const aord=[3,0,1,2,4],cap=["✊ Activists and citizens make climate change impossible to ignore.","🏛️ Public pressure pushes governments to regulate.","🏢 Regulation pushes companies to invest in clean tech.","🏦 Money moves away from fossil fuels and toward renewables.","🧑‍🤝‍🧑 Cheaper clean tech makes going green easier for everyone, and stronger rules easier to pass."];
+const grid=$('actorGrid');act.forEach(a=>{const sp=a[0].indexOf(' ');const d=document.createElement('div');d.className='actor';d.innerHTML='<div class="ico">'+a[0].slice(0,sp)+'</div><h3>'+a[0].slice(sp+1)+'</h3><p>'+a[1]+'</p><p class="weak">'+a[2]+'</p>';grid.appendChild(d)});
+let tm;$('chainBtn').onclick=()=>{clearInterval(tm);let k=0;const step=()=>{[...grid.children].forEach((c,j)=>c.classList.toggle('lit',j===aord[k]));$('chainCap').textContent=cap[k];k++;if(k>=aord.length){clearInterval(tm);setTimeout(()=>[...grid.children].forEach(c=>c.classList.remove('lit')),1800)}};step();tm=setInterval(step,1800)};
+// Court
+const EA=[["Developed nations emitted the most historically.","Many fast-growing nations now emit a lot too, and emissions cross borders."],["Fossil fuel companies produce a large share of emissions (Carbon Majors report).","People and governments still demand and use the energy they sell."],["Some firms lobby against regulation and greenwash.","Many firms are cutting emissions and investing in clean tech."]];
+const EB=[["Emissions cross borders, so no country can solve this alone.","That can let the biggest emitters off the hook."],["Many pollution sources are in poorer or fast-growing nations too.","Poorer nations contributed least and have fewer resources to cut emissions."],["If some nations don't act, the situation can still worsen for everyone.","Binding rules on the biggest emitters might achieve more than equal duties."]];
+let ca=0,cb=0;
+function tilt(){$('cA').textContent=ca;$('cB').textContent=cb;$('scaleIco').style.transform='rotate('+Math.max(-26,Math.min(26,(cb-ca)*9))+'deg)'}
+function mk(l,id,sd){l.forEach((e,i)=>{const d=document.createElement('div');d.className='exh '+sd;d.innerHTML='<small>EXHIBIT '+sd+(i+1)+'</small><p>'+e[0]+'</p><p class="ctr">⚔️ Counterargument: '+e[1]+'</p>';d.onclick=()=>{const on=d.classList.toggle('on');if(sd=='A')ca+=on?1:-1;else cb+=on?1:-1;tilt()};$(id).appendChild(d)})}
+mk(EA,'evA','A');mk(EB,'evB','B');
+$('gavelBtn').onclick=()=>{const v=+$('verd').value;let t,m;if(v<35){t='Polluters pay';m='Wealthy nations and major corporations carry the greatest duty to cut emissions and fund adaptation (climate justice).'}else if(v>65){t='Shared responsibility';m='Every nation must act together, because emissions cross borders and no one can solve this alone.'}else{t='Differentiated responsibility';m='Everyone must act, but those who emitted most and have the most resources should do more.'}$('verdOut').innerHTML='<div class="verdcard"><div class="gavel">🔨</div><h3 style="margin:6px 0">'+t+'</h3><p>'+m+'</p><p style="color:var(--mut)">Exhibits you backed: '+(ca+cb)+' of 6</p></div>'};
+// Solutions
+const sol=["Strengthen the Paris Agreement and make pledges binding","Make polluters pay into an international climate fund","Redirect finance from fossil fuels to renewables","Fund green energy in developing countries (UNDP, UNEP)","Install solar power, use EVs and public transport","Protect forests with Indigenous communities"];
+sol.forEach(s=>{const l=document.createElement('label');l.className='ev';l.innerHTML='<input type="checkbox"><span>'+s+'</span>';l.querySelector('input').onchange=calc;$('sol').appendChild(l)});
+function calc(){const n=[...document.querySelectorAll('#sol input')].filter(x=>x.checked).length;$('barFill').style.width=(n/sol.length*100)+'%';$('solTxt').textContent=n===0?"Pick actions to see what cooperation can achieve.":n<4?n+" action(s) chosen: a start, but it takes many actors moving together.":"Great, "+n+" actions: this is the chain reaction of cooperation the planet needs."}
+calc();
+const as=[["🇵🇭 Philippines","Sits in the typhoon belt and has a very long coastline, so it faces stronger storms, flooding and sea-level rise. Farmers and coastal communities feel it first, even though the country's share of global emissions is small."],["🇮🇩 Indonesia","A large archipelago with major forests and peatlands. Land clearing and fires add to emissions and haze, while coastal cities such as Jakarta face flooding and sinking land."],["🇻🇳 Vietnam","The Mekong Delta, a rice and seafood heartland, is threatened by rising seas and saltwater creeping into farmland, which can affect food supply beyond its borders."],["🇹🇭 Thailand","Low-lying areas, including Bangkok, are prone to floods. Major floods have disrupted factories and supply chains that connect to global trade."],["🇲🇾 Malaysia","Faces seasonal flooding. Forest conversion for plantations and its energy mix tie it into the global emissions story and global commodity markets."],["🇸🇬 Singapore","A small, low-lying city-state that imports most of its food, so it depends on other countries' harvests. It has used policies like a carbon tax and coastal planning."],["🇲🇲 Myanmar","Exposed to powerful cyclones and floods, with limited resources and uneven access to adaptation support."],["🇰🇭 Cambodia &amp; 🇱🇦 Laos","Depend on the Mekong and monsoon rains for farming and fisheries. Droughts, floods and upstream dams in one country change life for others downstream."],["🇧🇳 Brunei","A wealthy economy built on oil and gas, showing the tension between fossil fuel income and climate goals."],["🇹🇱 Timor-Leste","A young island nation with limited infrastructure, vulnerable to droughts, heavy rain and landslides."]];
+as.forEach((a,i)=>{const t=document.createElement('button');t.className='flagtab';const sp=a[0].indexOf(' ');t.innerHTML='<span class="fl">'+a[0].slice(0,sp)+'</span><span>'+a[0].slice(sp+1)+'</span>';t.onclick=()=>{$('aseanBox').innerHTML='<div class="bigflag">'+a[0].slice(0,sp)+'</div><h3 style="margin:0 0 6px">'+a[0].slice(sp+1)+'</h3>'+a[1]+refL(i);pick($('aseanTabs'),0,i);sel=i};$('aseanTabs').appendChild(t)});
+$('aseanTabs').firstChild.click();
+const tf=["Forests act as carbon sinks: trees store carbon as they grow.","Clearing land for plantations, farms and logging releases stored carbon and fuels warming.","Forest loss threatens wildlife, Indigenous communities and the water cycles that farms rely on.","Haze from forest and peat fires in one country can drift across borders, a clear case of interdependence.","Protecting forests together, with Indigenous stewards, is one of the most cost-effective climate actions."];let ti=0;
+function treeFact(){document.getElementById('treeBox').textContent=tf[ti%tf.length];ti++}
+route();
+</script></body></html>
