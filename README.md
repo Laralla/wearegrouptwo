@@ -4,7 +4,7 @@ An interactive website exploring climate change as a problem of global
 interdependence, made for our **Contemporary World** class (Group 2).
 
 ## 🔗 Live site
-**https://laralla.github.io/Project/**
+https://laralla.github.io/wearegrouptwo/
 
 > Copy the exact address from **Settings → Pages** ("Your site is live at…")
 > and paste it here in place of the link above.
